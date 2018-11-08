@@ -23,7 +23,7 @@ AppDownloader.LOCAL_STORAGE_KEY = 'download_apk';
 
 AppDownloader.prototype.saveDownloadInfo = function() {
   var storage = window.localStorage;
-  storage.setItem(LOCAL_STORAGE_KEY, true);
+  storage.setItem(AppDownloader.LOCAL_STORAGE_KEY, true);
 
   if (window.cordova && window.cordova.platformId === 'android') {
     var path = Downloader.PATH_BASE + this.path;
@@ -479,6 +479,7 @@ AppUpgrader.genProgressDialog = function(message) {
   domRoot.style.left = '50%';
   domRoot.style.transform = 'translate(-50%, -50%)';
   domRoot.style.padding = '5%';
+  domRoot.style.boxSizing = 'content-box';
 
 
   var SVG_NS = 'http://www.w3.org/2000/svg';
