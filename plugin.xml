@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest"
+  id="cordova-plugin-bell" version="1.0.0">
+  <engines>
+    <engine name="cordova-plugman" version=">=5.0.0" />
+    <engine name="cordova-android" version=">=7.0.0" />
+    <!-- <engine name="cordova-ios" version=">=4.4.0" /> -->
+    <!-- <engine name="cordova-browser" version=">=4.1.0" /> -->
+  </engines>
+  <name>CordovaPluginBell</name>
+  <description>
+    <![CDATA[
+      Cordova plugin defined by ai.bell
+    ]]>
+  </description>
+  <author>zhoujf@bell.ai</author>
+  <keywords>
+    <![CDATA[
+      bluetooth,
+      bluetoothle,
+      bluetooth le,
+      cordova,
+      ecosystem:cordova,
+      cordova-ios,
+      cordova-android,
+      mabot,
+      mabot ble
+    ]]>
+  </keywords>
+  <license>MIT</license>
+
+  <dependency id="cordova-plugin-file" version=">=5.0.0"></dependency>
+  <dependency id="cordova-plugin-file-transfer" version=">=1.7.1"></dependency>
+  <dependency id="cordova-plugin-app-version" version=">=0.1.9"></dependency>
+  <dependency id="cordova-plugin-file-opener2" version=">=2.0.19"></dependency>
+  <dependency id="cordova-plugin-fullscreen" version=">=1.1.0"></dependency>
+  <dependency id="cordova-plugin-network-information" version=">=1.3.3"></dependency>
+  <dependency id="cordova-plugin-battery-status" version=">=1.2.5"></dependency>
+  <dependency id="cordova-plugin-globalization" version=">=1.0.9"></dependency>
+  <dependency id="cordova-plugin-splashscreen" version=">=4.0.2"></dependency>
+
+  <js-module src="www/index.js" name="Bell">
+    <clobbers target="BellPlugin" />
+  </js-module>
+  <js-module src="www/sayHello.js" name="sayHello">
+    <runs />
+  </js-module>
+  <js-module src="www/test.js" name="test">
+    <runs />
+  </js-module>
+  <!-- common modules 公共模块-->
+  <js-module src="www/eventemitter3.js" name="eventemitter3">
+    <runs />
+  </js-module>
+  <js-module src="www/configs.js" name="configs">
+    <runs />
+  </js-module>
+  <js-module src="www/downloader.js" name="downloader">
+    <runs />
+  </js-module>
+  <js-module src="www/httpJsonCache.js" name="httpJsonCache">
+    <runs />
+  </js-module>
+  <!-- bell modules 我们的各功能模块-->
+  <js-module src="www/app.js" name="app">
+    <runs />
+  </js-module>
+  <js-module src="www/appUpgrader.js" name="appUpgrader">
+    <runs />
+  </js-module>
+
+  <platform name="android">
+    <!-- empty -->
+  </platform>
+
+  <platform name="ios">
+    <!-- empty -->
+  </platform>
+
+  <platform name="browser">
+  </platform>
+</plugin>
