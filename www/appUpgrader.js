@@ -435,7 +435,7 @@ AppUpgrader.gotoDownloadAndInstall = function(url, versionNo) {
     window.open(Configs.APP_STORE_LINK, '_system');
     return;
   }
-  var downloader = new AppDownloader(url, versionNo);
+  var downloader = new AppDownloader(url, versionNo, 'MabotIDE_');
   var dialog = AppUpgrader.genProgressDialog(Locale.getInternalString('downloading'));
   downloader.addStartListener(function() {
     dialog.dom.show();
